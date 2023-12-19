@@ -56,7 +56,9 @@ folders = glob(train_path+'/*')
 
 
 
-
+'''
+Load the pre-trained models from Keras
+'''
 mobilenet_v2 = tf.keras.applications.mobilenet_v2.MobileNetV2(input_shape=(224, 224, 3),include_top=False,weights='imagenet')
 vgg16= tf.keras.applications.vgg16.VGG16(input_shape=(224, 224, 3),include_top=False,weights='imagenet')
 vgg19 = tf.keras.applications.vgg19.VGG19(input_shape=(224, 224, 3),include_top=False, weights='imagenet')
