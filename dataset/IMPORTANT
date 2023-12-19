@@ -1,0 +1,15 @@
+'''
+PREREQUISITE: the fresh apple data is misnamed as "FreshOrange" instead of "FreshApple", so before
+splitting the dataset you can run:
+
+  directory = "/path/to/your/directory"
+  for filename in os.listdir(directory):
+    if filename.startswith("FreshOrange") and filename.lower().endswith(".jpg"):
+        # Construct the old and new file paths
+        old_file = os.path.join(directory, filename)
+        new_file = os.path.join(directory, "FreshApple" + filename[len("FreshOrange"):])
+        # Rename the file
+        os.rename(old_file, new_file)
+
+to replace all the "FreshOrange" as "FreshApple"
+'''
